@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phoenix Movement Coaching</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 2px solid #00ff88;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00ff88;
+            text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 30px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00ff88;
+        }
+
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #00ff88;
+            text-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #b8c5d6;
+        }
+
+        .price {
+            font-size: 36px;
+            color: #00ff88;
+            margin: 30px 0;
+            font-weight: bold;
+        }
+
+        .price span {
+            font-size: 18px;
+            color: #b8c5d6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 50px;
+            background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
+            color: #0a0e27;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 255, 136, 0.5);
+        }
+
+        .features {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+            color: #00ff88;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #00ff88;
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
+        }
+
+        .feature-card h3 {
+            color: #00ff88;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: #b8c5d6;
+            line-height: 1.8;
+        }
+
+        .testimonials {
+            padding: 80px 0;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+            color: #00ff88;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid #00ff88;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            color: #b8c5d6;
+            margin-bottom: 15px;
+        }
+
+        .testimonial .author {
+            color: #00ff88;
+            font-weight: bold;
+        }
+
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3);
+            border-top: 1px solid rgba(0, 255, 136, 0.2);
+            color: #b8c5d6;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .nav-links a {
+                margin-left: 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="container">
+        <div class="logo">KRUNKER COACHING</div>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#testimonials">Reps</a>
+            <a href="https://buy.stripe.com/8x24gA06Ud7IcW326q3AY00">Get Started</a>
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>Master Krunker.io Movement</h1>
+        <p>Level up your gameplay with professional 1-on-1 coaching</p>
+        <p>Learn advanced slidehops, rotations, and speed control techniques</p>
+
+        <div class="price">
+            $5 <span>/ 1 week of coaching</span>
+        </div>
+
+        <a href="https://buy.stripe.com/8x24gA06Ud7IcW326q3AY00" 
+           class="cta-button">
+           Start Your Training
+        </a>
+    </div>
+</section>
+
+<section class="features" id="features">
+    <div class="container">
+        <h2>What You'll Learn</h2>
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <h3>Slidehop Mastery</h3>
+                <p>Perfect your slidehopping technique to maintain maximum speed and outmaneuver opponents.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Advanced Rotations</h3>
+                <p>Learn high-level movement paths to dominate maps efficiently.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>1-on-1 Coaching</h3>
+                <p>Personalized sessions tailored to your skill level and goals.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Performance Analysis</h3>
+                <p>Detailed gameplay breakdowns to rapidly improve.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Competitive Strategy</h3>
+                <p>Learn how to apply movement techniques in real matches.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Discord Support</h3>
+                <p>Direct access to coaching support throughout your week.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <h2>What Students Say</h2>
+        <div class="testimonial-grid">
+
+            <div class="testimonial">
+                <p>"My KDR doubled in one week. Movement alone changed my entire gameplay."</p>
+                <div class="author">- Alex_FPS</div>
+            </div>
+
+            <div class="testimonial">
+                <p>"Best $5 I've ever spent. Coaching was clear, direct, and effective."</p>
+                <div class="author">- SlideKing99</div>
+            </div>
+
+            <div class="testimonial">
+                <p>"Finally mastered slidehopping. Everything just clicked."</p>
+                <div class="author">- KrunkerNoob2Pro</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="hero" style="padding: 60px 0;">
+    <div class="container">
+        <h2 style="color: #fff; margin-bottom: 20px;">Ready to Dominate?</h2>
+        <p>Start your movement transformation today.</p>
+
+        <div style="margin-top: 30px;">
+            <a href="https://buy.stripe.com/8x24gA06Ud7IcW326q3AY00" 
+               class="cta-button">
+               Get Started Now
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Krunker Coaching by Phoenix. All rights reserved.</p>
+        <p>Not affiliated with Krunker.io or FRVR</p>
+    </div>
+</footer>
+
+</body>
+</html>
